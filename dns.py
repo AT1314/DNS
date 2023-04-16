@@ -1,4 +1,4 @@
-import socket, glob
+import socket, glob, json
 
 # Define port and ip address
 port = 53
@@ -106,7 +106,7 @@ def getrecs(data):
     domain, questiontype = getquestiondomain(data)
     qt = ''
     if questiontype == b'\x00\x01':
-        qt = 'a '
+        qt = 'a'
 
     zone = getzone(domain)
 
